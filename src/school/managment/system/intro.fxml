@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="AnchorPane" prefHeight="500.0" prefWidth="800.0" styleClass="mainFxmlClass" stylesheets="@welcom.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.managment.system.IntroController">
+   <children>
+      <Button layoutX="739.0" layoutY="4.0" mnemonicParsing="false" onAction="#exit1" prefHeight="32.0" prefWidth="53.0" styleClass="exit" stylesheets="@welcom.css" textFill="#df0d0d" />
+      <FontAwesomeIcon fill="#f2ebeb" iconName="CLOSE" layoutX="761.0" layoutY="25.0" selectionFill="#eae0e0" />
+      <Label layoutX="173.0" layoutY="112.0" text="Welcome To School Management System">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="124.0" layoutY="264.0" text="If you are an Employee click on">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="124.0" layoutY="222.0" text="If you are a Student click on">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="studentbtn" layoutX="351.0" layoutY="218.0" onAction="#changeForm" stylesheets="@welcom.css" text="Student" textFill="#5185c5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="Teacherbtn" layoutX="380.0" layoutY="260.0" onAction="#changeForm1" text="Teacher" textFill="#5185c5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="Registrarbtn" layoutX="454.0" layoutY="260.0" onAction="#changeForm3" text="Registrar" textFill="#5185c5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="Othersbtn" layoutX="536.0" layoutY="260.0" onAction="#changeForm2" text="Others" textFill="#5185c5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

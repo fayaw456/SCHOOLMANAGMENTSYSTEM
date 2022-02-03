@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.managment.system.OthersDashboardController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <AnchorPane prefHeight="504.0" prefWidth="222.0" styleClass="mainFxmlClass" stylesheets="@welcom.css">
+               <children>
+                  <Button fx:id="others_btn" layoutX="10.0" layoutY="176.0" mnemonicParsing="false" onAction="#frame" prefHeight="46.0" prefWidth="201.0" styleClass="button-design" stylesheets="@../student/management/system/welcom.css" text="OTHERS PROFIE" textFill="#fcfafa">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="activity_btn" layoutX="10.0" layoutY="244.0" mnemonicParsing="false" onAction="#frame" prefHeight="46.0" prefWidth="202.0" styleClass="button-design" stylesheets="@../student/management/system/welcom.css" text="     Activity &amp; Salary" textFill="#fcfafa">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="othersComment_btn" layoutX="10.0" layoutY="315.0" mnemonicParsing="false" onAction="#frame" prefHeight="46.0" prefWidth="202.0" styleClass="button-design" stylesheets="@../student/management/system/welcom.css" text="Comment" textFill="#fcfafa">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <FontAwesomeIcon fill="#662d60" iconName="USER" layoutX="20.0" layoutY="207.0" selectionFill="#e13a3a" size="2em" />
+                  <FontAwesomeIcon fill="#662d60" iconName="PASTE" layoutX="27.0" layoutY="275.0" selectionFill="#e13a3a" size="2em" />
+                  <FontAwesomeIcon fill="#662d60" iconName="COMMENT" layoutX="17.0" layoutY="346.0" selectionFill="#e13a3a" size="2em" />
+               </children>
+            </AnchorPane>
+            <Button layoutX="726.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit1" prefHeight="26.0" prefWidth="60.0" styleClass="exit" stylesheets="@welcom.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="1.0" />
+            <FontAwesomeIcon fill="#f4eeee" iconName="CLOSE" layoutX="762.0" layoutY="18.0" />
+            <AnchorPane fx:id="othersProfile" layoutX="222.0" layoutY="29.0" prefHeight="475.0" prefWidth="578.0" styleClass="mainFxmlClass2" stylesheets="@welcom.css">
+               <children>
+                  <Label layoutX="98.0" layoutY="29.0" text="OTHERS PROFILE" textFill="#fcfbfb">
+                     <font>
+                        <Font name="Elephant" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="othersActivity" layoutX="222.0" layoutY="29.0" prefHeight="475.0" prefWidth="578.0" styleClass="mainFxmlClass2" stylesheets="@welcom.css" visible="false">
+               <children>
+                  <Label layoutX="120.0" layoutY="31.0" text="Activity and Salary" textFill="#fcfbfb">
+                     <font>
+                        <Font name="Elephant" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="othersComment" layoutX="222.0" layoutY="29.0" prefHeight="475.0" prefWidth="578.0" styleClass="mainFxmlClass2" stylesheets="@welcom.css" visible="false">
+               <children>
+                  <Label layoutX="142.0" layoutY="31.0" text="Comment Box" textFill="#fcfbfb">
+                     <font>
+                        <Font name="Elephant" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

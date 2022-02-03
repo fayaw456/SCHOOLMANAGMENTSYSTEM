@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.managment.system.RegistrarController">
+   <children>
+      <AnchorPane layoutX="2.0" prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <AnchorPane layoutX="-6.0" prefHeight="500.0" prefWidth="400.0" styleClass="mainFxmlClass" stylesheets="@welcom.css">
+               <children>
+                  <Label fx:id="m" layoutX="130.0" layoutY="126.0" onDragDetected="#dropShadowEffect" text="A">
+                     <font>
+                        <Font name="Baskerville Old Face" size="200.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="adminback_btn" layoutX="23.0" layoutY="441.0" onAction="#changeForm" text="BACK" textFill="#0f12d7">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="394.0" prefHeight="500.0" prefWidth="408.0">
+               <children>
+                  <Button layoutX="342.0" layoutY="7.0" mnemonicParsing="false" onAction="#exit1" prefHeight="26.0" prefWidth="56.0" styleClass="exit" stylesheets="@welcom.css" AnchorPane.topAnchor="7.0" />
+                  <FontAwesomeIcon fill="#f4f3f3" iconName="CLOSE" layoutX="365.0" layoutY="25.0" onDragDetected="#exit1" />
+                  <FontAwesomeIcon fill="#662d60" iconName="USER" layoutX="166.0" layoutY="145.0" size="8em" />
+                  <TextField fx:id="adminname" layoutX="103.0" layoutY="200.0" promptText="Admin Name" styleClass="textfield-design" stylesheets="@welcom.css">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="adminPassword" layoutX="103.0" layoutY="265.0" promptText="Password" styleClass="textfield-design" stylesheets="@welcom.css">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </PasswordField>
+                  <Button fx:id="adminLogin_btn" layoutX="166.0" layoutY="354.0" mnemonicParsing="false" onAction="#login" styleClass="button-design" stylesheets="@welcom.css" text="Login" textFill="#fcfafa">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
