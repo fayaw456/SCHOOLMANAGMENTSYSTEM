@@ -7,14 +7,10 @@ package school.managment.system;
 
 import java.io.IOException;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -22,6 +18,7 @@ import javafx.stage.StageStyle;
  *
  * @author W10X64_AUG-2020
  */
+
 public class SCHOOLMANAGMENTSYSTEM extends Application {
 
     private double x = 0;
@@ -37,8 +34,8 @@ public class SCHOOLMANAGMENTSYSTEM extends Application {
         });
 
         root.setOnMouseDragged((MouseEvent event) -> {
-            primaryStage.setX(event.getScreenX() - x);
-            primaryStage.setY(event.getScreenY() - y);
+        primaryStage.setX(event.getScreenX() - x);
+        primaryStage.setY(event.getScreenY() - y);
 
         });
 

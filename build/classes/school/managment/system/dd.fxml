@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="gp" alignment="TOP_LEFT" hgap="10" prefHeight="467.0" prefWidth="723.0" vgap="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="school.managment.system.SeeController">
+
+    <Label text="Hello, World!" GridPane.rowIndex="0" />
+
+    <TextField fx:id="txt1" maxHeight="20" promptText="First Name" GridPane.columnIndex="1" />
+
+    <TextField fx:id="txt2" maxHeight="20" GridPane.columnIndex="2" />
+
+    <Button fx:id="btn" onAction="#student_btn" text="Click Me!" GridPane.columnIndex="3" />
+
+
+    <TableView fx:id="Table_view" GridPane.columnIndex="1" GridPane.columnSpan="10" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS" />
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+
+
+</GridPane>

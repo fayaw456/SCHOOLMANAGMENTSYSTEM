@@ -24,6 +24,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -33,7 +34,6 @@ import javafx.stage.Stage;
  * @author W10X64_AUG-2020
  */
 public class RegistrarController implements Initializable {
-    
     
     @FXML
     private Label m;
@@ -107,6 +107,8 @@ public class RegistrarController implements Initializable {
             e.printStackTrace();
         }
         }
+
+    
     /**
      * Initializes the controller class.
      */

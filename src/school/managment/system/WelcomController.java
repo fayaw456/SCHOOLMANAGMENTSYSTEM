@@ -11,6 +11,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -29,6 +30,7 @@ import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -36,7 +38,7 @@ import javafx.stage.Stage;
  * @author W10X64_AUG-2020
  */
 public class WelcomController implements Initializable {
-
+ static String IDNo;
     /**
      * Initializes the controller class.
      */
@@ -213,7 +215,7 @@ public class WelcomController implements Initializable {
 
             result = prs.executeQuery();
             if (result.next()) {
-
+            IDNo = result.getString(2);
                 FXMLLoader fxmlLoader = new FXMLLoader(TeachersDashboardController.class.getResource("TeachersDashboard.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 800, 500);
                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -232,7 +234,34 @@ public class WelcomController implements Initializable {
             e.printStackTrace();
         }
     }
+    public static String getId(){
+        return WelcomController.IDNo;
+    }
 
+    public void SIGN_UP(ActionEvent event) throws ClassNotFoundException{
+            
+            DBConnectionC db = new DBConnectionC();
+            conn = db.connMethod();
+            String sql = "INSERT INTO `teacher_table`(`TEACHER_NAME`, `EMAIL`, `PASSWORD`) VALUES (?, ?, ?)";
+                String lbl = su_username.getText();
+                String lbl1 = su_email.getText();
+                String lbl2 = su_password.getText();
+                    try { 
+                        prs = conn.prepareStatement(sql);
+                        prs.setString(1, lbl);
+                        prs.setString(2, lbl1);
+                        prs.setString(3, lbl2);
+                        int i = prs.executeUpdate();
+                        if (i == 1) {
+
+                     JOptionPane.showMessageDialog(null, "Registered succsecfully");
+                        }
+
+                    } catch (SQLException ex) {
+                       ex.printStackTrace();
+                     //JOptionPane.showMessageDialog(null, "Try again!!");
+        }} 
+   
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

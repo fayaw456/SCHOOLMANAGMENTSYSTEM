@@ -35,6 +35,7 @@ import javafx.stage.Stage;
  */
 public class OthersloginController implements Initializable {
     
+   static String IDNo; 
     @FXML
     private Hyperlink othersback_btn;
     
@@ -54,7 +55,11 @@ public class OthersloginController implements Initializable {
     private Statement st;
     private PreparedStatement prs;
     private ResultSet result;
-
+    
+    public static String getID(){
+        return OthersloginController.IDNo;
+    }
+    
     public void exit(){
         System.exit(0);
 } 
@@ -88,7 +93,7 @@ public class OthersloginController implements Initializable {
 
             result = prs.executeQuery();
          if(result.next()){
-         
+         IDNo = result.getString(2);
         FXMLLoader fxmlLoader = new FXMLLoader(OthersDashboardController.class.getResource("OthersDashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 500);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

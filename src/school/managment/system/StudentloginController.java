@@ -34,12 +34,14 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javax.swing.JOptionPane;
 
+
 /**
  * FXML Controller class
  *
  * @author W10X64_AUG-2020
  */
 public class StudentloginController implements Initializable {
+    static String IDNo;
     private double x = 0;
     private double y = 0;
     @FXML
@@ -62,6 +64,10 @@ public class StudentloginController implements Initializable {
     private PreparedStatement prs;
     private ResultSet result;
 
+    
+    public static String getID(){
+        return StudentloginController.IDNo;
+    }
     public void exit() {
         System.exit(0);
     }
@@ -98,7 +104,7 @@ public class StudentloginController implements Initializable {
             
             result = prs.executeQuery();
          if(result.next()){
-         
+        IDNo = result.getString(2);
         FXMLLoader fxmlLoader = new FXMLLoader(DashboardController.class.getResource("Dashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 500);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

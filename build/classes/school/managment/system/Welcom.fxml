@@ -101,12 +101,12 @@
                         <Font size="17.0" />
                      </font>
                   </PasswordField>
-                  <Button fx:id="signup_btn" layoutX="159.0" layoutY="372.0" mnemonicParsing="false" styleClass="button-design" stylesheets="@welcom.css" text="SignUp" textFill="#fcfafa">
+                  <Button fx:id="signup_btn" layoutX="159.0" layoutY="372.0" mnemonicParsing="false" onAction="#SIGN_UP" styleClass="button-design" stylesheets="@welcom.css" text="SignUp" textFill="#fcfafa">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Hyperlink fx:id="su_login_btn" layoutX="170.0" layoutY="450.0" onAction="#changeForm" text="Log In" textFill="#5185c5">
+                  <Hyperlink fx:id="su_login_btn" layoutX="170.0" layoutY="450.0" onAction="#changeForm" text="LOGIN" textFill="#5185c5">
                      <font>
                         <Font size="18.0" />
                      </font>

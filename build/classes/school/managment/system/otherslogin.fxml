@@ -15,7 +15,7 @@
          <children>
             <AnchorPane prefHeight="500.0" prefWidth="400.0" styleClass="mainFxmlClass" stylesheets="@welcom.css">
                <children>
-                  <Label fx:id="o" layoutX="119.0" layoutY="118.0" onDragDetected="#dropShadowEffect" text="O">
+                  <Label fx:id="o" layoutX="119.0" layoutY="118.0" onDragDetected="#dropShadowEffect" stylesheets="@welcom.css" text="O">
                      <font>
                         <Font name="Baskerville Old Face" size="200.0" />
                      </font>

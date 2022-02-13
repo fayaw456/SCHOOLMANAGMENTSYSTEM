@@ -31,6 +31,15 @@
     -fx-text-inner-color:#000;
 }
 
+.textfield-design1{
+    
+    -fx-background-color:WHITE;
+    -fx-background-radius:10px;
+    -fx-border-color:linear-gradient(to bottom right,#2f466b, #662d60);
+    -fx-background-radius:10px;
+    -fx-text-inner-color:#000;
+}
+
 .button-design{
     
 
@@ -38,4 +47,12 @@
     -fx-background-radius:20px;
     -fx-cursor:hand;
     
+}
+
+.anybutton{
+    
+    -fx-background-color:#0b21b2;
+    -fx-background-radius:5px;
+    -fx-cursor:hand;
+
 }

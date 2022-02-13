@@ -2,7 +2,10 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -30,22 +33,79 @@
                   <FontAwesomeIcon fill="#662d60" iconName="USER" layoutX="14.0" layoutY="212.0" selectionFill="#e13a3a" size="3em" />
                   <FontAwesomeIcon fill="#662d60" iconName="PASTE" layoutX="20.0" layoutY="280.0" selectionFill="#e13a3a" size="3em" />
                   <FontAwesomeIcon fill="#662d60" iconName="COMMENT" layoutX="20.0" layoutY="351.0" selectionFill="#e13a3a" size="3em" />
+                  <Hyperlink layoutX="54.0" layoutY="7.0" onAction="#LOGOUT" text="LOG OUT" textFill="#0f12d7">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Hyperlink>
                </children>
             </AnchorPane>
             <Button layoutX="726.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit1" prefHeight="26.0" prefWidth="60.0" styleClass="exit" stylesheets="@welcom.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="1.0" />
             <FontAwesomeIcon fill="#f4eeee" iconName="CLOSE" layoutX="762.0" layoutY="18.0" />
             <AnchorPane fx:id="studProfile" layoutX="200.0" layoutY="29.0" prefHeight="475.0" prefWidth="600.0" styleClass="mainFxmlClass2" stylesheets="@welcom.css">
                <children>
-                  <Label layoutX="98.0" layoutY="29.0" text="STUDENT PROFILE" textFill="#fcfbfb">
+                  <Label layoutX="98.0" layoutY="29.0" style="-fx-background-color: green;" text="STUDENT PROFILE" textFill="#fcfbfb">
                      <font>
                         <Font name="Elephant" size="36.0" />
                      </font>
                   </Label>
+                  <Label layoutX="40.0" layoutY="131.0" text="STUDENT_NAME" textFill="#fffefe">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="178.0" text="PASSWORD" textFill="#fffefe">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="stud_name" layoutX="174.0" layoutY="127.0" prefHeight="27.0" prefWidth="225.0" styleClass="textfield-design1" stylesheets="@welcom.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextField fx:id="stud_pass" layoutX="174.0" layoutY="174.0" prefHeight="27.0" prefWidth="226.0" styleClass="textfield-design1" stylesheets="@welcom.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <Button layoutX="346.0" layoutY="397.0" mnemonicParsing="false" onAction="#edit" prefHeight="26.0" prefWidth="70.0" styleClass="anybutton" stylesheets="@welcom.css" text="EDIT" textFill="#f4f0f0">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="42.0" layoutY="308.0" text="PICTURE" textFill="#fffefe">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="112.0" layoutY="397.0" mnemonicParsing="false" onAction="#show" styleClass="anybutton" stylesheets="@welcom.css" text="SHOW" textFill="#f4f1f1">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="stud_id" layoutX="174.0" layoutY="218.0" prefHeight="27.0" prefWidth="226.0" styleClass="textfield-design1" stylesheets="@welcom.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <Label layoutX="40.0" layoutY="222.0" text="STUDENT_ID" textFill="#fffefe">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="270.0" text="STUDENT_CLASS" textFill="#fffefe">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="stud_class" layoutX="180.0" layoutY="270.0" prefHeight="26.0" prefWidth="220.0" styleClass="textfield-design1" stylesheets="@welcom.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
                </children>
             </AnchorPane>
             <AnchorPane fx:id="studRecord" layoutX="200.0" layoutY="29.0" prefHeight="475.0" prefWidth="600.0" styleClass="mainFxmlClass2" stylesheets="@welcom.css" visible="false">
                <children>
-                  <Label layoutX="98.0" layoutY="29.0" text="STUDENT RECORD" textFill="#fcfbfb">
+                  <Label layoutX="98.0" layoutY="29.0" style="-fx-background-color: green;" text="STUDENT RECORD" textFill="#fcfbfb">
                      <font>
                         <Font name="Elephant" size="36.0" />
                      </font>
@@ -54,11 +114,21 @@
             </AnchorPane>
             <AnchorPane fx:id="studCommednt" layoutX="200.0" layoutY="29.0" prefHeight="475.0" prefWidth="600.0" styleClass="mainFxmlClass2" stylesheets="@welcom.css" visible="false">
                <children>
-                  <Label layoutX="116.0" layoutY="31.0" text="COMMENT BOX" textFill="#fcfbfb">
+                  <Label layoutX="116.0" layoutY="31.0" style="-fx-background-color: green;" text="COMMENT BOX" textFill="#fcfbfb">
                      <font>
                         <Font name="Elephant" size="36.0" />
                      </font>
                   </Label>
+                  <TextArea layoutX="27.0" layoutY="114.0" prefHeight="284.0" prefWidth="555.0" promptText="Write your message here......">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextArea>
+                  <Button layoutX="256.0" layoutY="426.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" styleClass="anybutton" stylesheets="@welcom.css" text="SEND" textFill="#faf7f7">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
                </children>
             </AnchorPane>
          </children>
